@@ -55,6 +55,7 @@ void EmporiaVueComponent::update() {
     return;
   }
   */
+  ESP_LOGV(TAG, "Received sensor reading #%d", sensor_reading);
 
   if (!sensor_reading.is_unread) {
     ESP_LOGV(TAG, "Ignoring sensor reading that is marked as read");
