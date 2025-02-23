@@ -48,12 +48,13 @@ void EmporiaVueComponent::update() {
     ESP_LOGE(TAG, "Failed to read from sensor due to I2C error %d", err);
     return;
   }
-
+/*
   if (sensor_reading.end != 0) {
     ESP_LOGE(TAG, "Failed to read from sensor due to a malformed reading, should end in null bytes but is %d",
              sensor_reading.end);
     return;
   }
+  */
 
   if (!sensor_reading.is_unread) {
     ESP_LOGV(TAG, "Ignoring sensor reading that is marked as read");
